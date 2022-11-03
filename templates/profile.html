@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <section id="edit" >
+        <div id="div-form">
+
+
+        
+        <div id="div-label">
+            <label for="">Interests</label>
+            <label for="">Experience</label>
+            <label for="">Age</label>
+            <label for="">Git</label>
+            <label for="">Bio</label>
+            <label for="">LinkedIN</label>
+            <label for="">Instagram</label>
+            <label for="">Username</label>
+            <label for="">First Name</label>
+            <label for="">Last Name</label>
+            <label for="">Email</label>
+            <label for=""></label>
+        </div>
+        <form action="" method="post" id="edit-form">
+            {%csrf_token%}
+            
+        <input type="text" placeholder="interests" value="{{interests}}" name="interests" required />
+        <input type="number" placeholder="experiance" value="0" name="experiance"  />
+        <input type="number" placeholder="age" value="0" name="age"  />
+        <input type="text" placeholder="git" value="" name="git"  />
+        <input type="text" placeholder="bio" value="" name="bio"  />
+        <input type="text" placeholder="linkedin" value="" name="linkedin"  />
+        <input type="text" placeholder="instagram" value="" name="instagram"  />
+        <input  style="pointer-events: none;" type="text" placeholder="{{username}}" name="username"  />
+        <input style="pointer-events: none;" type="text" placeholder="{{firstname}}" name="firstname"/>
+        <input  style="pointer-events: none;" type="text" placeholder="{{lastname}}" name="lastname" />
+        <input  style="pointer-events: none;" type="email" placeholder="{{email}}" name="email" />
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+</section>
+  
+
+{% endblock%}
+

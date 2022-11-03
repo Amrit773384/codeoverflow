@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeOverflow</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-weight:200;">Code Overflow</h1>
+        <div>
+
+            <ul>
+                <a href="/home"><button>Home</button></a>
+                <a href="/logout"><button>Logout</button></a>
+                <a href="/contact"><button>Contact</button></a>
+            </ul>
+            <div id="profilediv" onclick="window.location.href='/profile'" title="Edit Your Profile">
+
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+
+
+    <div class="header">
+
+        <!--Content before waves-->
+        <div id="content-div">
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+    
+    </div>
+
+
+
+</body>
+
+
+</html>

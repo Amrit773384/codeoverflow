@@ -1,0 +1,59 @@
+nav {
+    display: flex;
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition-duration: 500ms;
+    z-index: 1;
+    background-color: rgb(235, 235, 235);
+}
+
+nav>div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+
+}
+
+nav>div>div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% ;
+    border:1px solid black;
+    margin-right: 25px;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/3135/3135715.png);
+    background-size: 100%;
+}
+
+nav > div > ul {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+    height: 100%;
+}
+nav > div > ul > a > button {
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding:0;
+    margin:0;
+    width:90px;
+    height:80%;
+    color:black;
+}
+
+nav > div > ul > a > button:hover{
+    box-shadow: 0 0 4px 1px grey;
+}
+nav>div>div:hover{
+    box-shadow: 0 0 4px 1px grey;
+}
