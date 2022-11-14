@@ -267,18 +267,13 @@
 <div id="message" style="visibility:hidden;">{{message}}</div>
 <body style="background-image:linear-gradient(90deg, rgba(255, 0, 0, 0.308) , white,rgba(255, 0, 0, 0.308));">
     <h2 style="padding-top:10px ;">Find Your Coding Partner </h2>
+    <h3>{{ error }}</h3>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="" method="post">
                 {%csrf_token%}
                 <input type="hidden" name="signup" id="">
                 <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
                 <input type="text" placeholder="Username"  name="username"required/>
                 <input type="text" placeholder="First Name" name="firstname" required />
                 <input type="text" placeholder="Last Name" name="lastname" />
@@ -292,12 +287,6 @@
                 {%csrf_token%}
                 <input type="hidden" name="signin" id="">
                 <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
                 <input type="text" placeholder="Username" name="username" required/>
                 <!-- master branch -->
                 <input type="password" placeholder="Password" name="password" required/>

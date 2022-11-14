@@ -1,0 +1,76 @@
+#search-button{
+    width:110px;
+    height:110px ;
+    background-color: white;
+    border-radius:50% 50% 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    z-index: 2;
+    cursor: pointer;
+}
+#search-button > div{
+    z-index: -1;
+    position:absolute;
+}
+#search-button > h2{
+    color:red;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    background-color: white;
+}
+#c1{
+    width: 110px;
+    height: 110px;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    border-radius:50% 50% 50% 50%;
+    animation: pulse infinite;
+    animation-duration: 4s;
+    animation-delay: 0;
+
+}
+#c2{
+    width: 110px;
+    height: 110px;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    border-radius:50% 50% 50% 50%;
+    animation: pulse infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+#c3{
+    width: 110px;
+    height: 110px;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    border-radius:50% 50% 50% 50%;
+    animation: pulse infinite;
+    animation-duration:4s;
+    animation-delay: 2s;
+}
+#c4{
+    width: 110px;
+    height: 110px;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    border-radius:50% 50% 50% 50%;
+    animation: pulse infinite;
+    animation-duration:4s;
+    animation-delay: 3s;
+}
+@keyframes pulse {
+    0%{
+        width: 110px;
+        height: 110px;
+        opacity: 1;
+    }
+    50%{
+        width: 180px;
+        height: 180px;
+    }
+    100%{
+        opacity:0;
+    }
+    
+}
+

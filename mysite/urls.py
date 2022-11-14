@@ -24,6 +24,7 @@ urlpatterns = [
     path('home',include('myapp.urls')),
     path('contact',include('myapp.urls')),
     path('profile',include('myapp.urls')),
+    path('search',include('myapp.urls')),
 ]
 
 

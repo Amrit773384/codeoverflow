@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="width: 100%;height: auto;display: flex;align-items: center;justify-content: center;">
+
+  <table id="output-table">
+    <tr>
+      <th>Username</th>
+      <th>Bio</th>
+      <th>Interests</th>
+      <th>Experience</th>
+      <th>Github</th>
+    </tr>
+
+    {% for user in Users%}
+    <tr>
+      <td>{{user.username}}</td>
+      <td>{{user.bio}}</td>
+      <td>{{user.interests}}</td>
+      <td>{{user.experiance}}</td>
+      <td>{{user.git}}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+</div>
+
+{% endblock%}

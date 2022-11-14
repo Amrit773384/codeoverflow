@@ -7,14 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeOverflow</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <script>
-
-    </script>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    {% if index_html %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endif %}
+    {% if contact_html %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    {% endif %}
+    {% if profile_html %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    {% endif %}
+    {% if search_html %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    {% endif %}
+    <link rel="icon" href="data:image/png;base64,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">
 </head>
 
 <body>
@@ -31,18 +38,11 @@
 
             </div>
         </div>
-
     </nav>
-
-
-
-
-
-
     <div class="header">
 
         <!--Content before waves-->
-        <div id="content-div">
+        <div id="content-div" style="z-index:2;">
             {% block content %}
             {% endblock %}
 
@@ -52,7 +52,8 @@
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
                 <g class="parallax">
                     <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
@@ -62,13 +63,6 @@
                 </g>
             </svg>
         </div>
-        <!--Waves end-->
-    
     </div>
-
-
-
 </body>
-
-
 </html>

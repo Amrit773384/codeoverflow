@@ -24,7 +24,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: url("https://i.ibb.co/z4wgBG3/bgg-min.jpg") no-repeat center;
+    background: url("http://dataquestllc.com/images/Bigstock_66354202_ContactUs.jpg") no-repeat center;
     background-size: cover;
     filter: blur(50px);
     z-index: -1;
@@ -42,7 +42,7 @@
 }
 
 .left {
-    background: url("https://i.ibb.co/z4wgBG3/bgg-min.jpg") no-repeat center;
+    background: url("http://dataquestllc.com/images/Bigstock_66354202_ContactUs.jpg") no-repeat center;
     background-size: cover;
     height: 100%;
 }
@@ -66,7 +66,7 @@ h2:after {
     height: 4px;
     width: 50px;
     border-radius: 2px;
-    background-color: #2ecc71;
+    background-color: red;
 }
 
 .field {
@@ -91,7 +91,7 @@ textarea {
 .btn {
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: #2ecc71;
+    background-color: red;
     color: #fff;
     font-size: 1.1rem;
     border: none;
@@ -101,7 +101,7 @@ textarea {
 }
 
 .btn:hover {
-    background-color: #27ae60;
+    background-color: red;
 }
 
 .field:focus {

@@ -1,9 +1,95 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <section id="edit">
+    <div class="containerp" id="containerpro" style="">
+        <header>Personal Details</header>
 
-    <section id="edit" >
-        <div id="div-form">
+        <form action="#" id="editform" method="post">
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Interests</label>
+                            <input type="text" value="{{interests}}" name="interests" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Biography</label>
+                            <input type="text" value="{{bio}}" name="bio" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Git Username</label>
+                            <input type="text" value="{{git}}" name="git">
+                        </div>
+
+                        <div class="input-field">
+                            <label>LinkedIN Username</label>
+                            <input type="text" value="{{linkedin}}" name="linkedin" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Instagram Username</label>
+                            <input type="text" value="{{instagram}}" name="instagram" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Experience</label>
+                            <input type="number" value="{{experience}}"  name="experiance" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="number" value="{{age}}" name="age" >
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <header>Identity Details</header>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" value="{{username}}" name="username" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" name="firstname" value="{{firstname}}" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Last name</label>
+                            <input type="text" value="{{lastname}}" name="lastname" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" value="{{email}}" name="email" required>
+                        </div>
+
+                        {% comment %} <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" required>
+                        </div>
+                    </div> {% endcomment %}
+
+                    <button class="nextBtn" type="submit">
+                        <span class="btnText">Update</span>
+                    </button>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <!--<script src="script.js"></script>-->
+
+        <!-- <div id="div-form">
 
 
         
@@ -24,21 +110,21 @@
         <form action="" method="post" id="edit-form">
             {%csrf_token%}
             
-        <input type="text" placeholder="interests" value="{{interests}}" name="interests" required />
-        <input type="number" placeholder="experiance" value="0" name="experiance"  />
-        <input type="number" placeholder="age" value="0" name="age"  />
-        <input type="text" placeholder="git" value="" name="git"  />
-        <input type="text" placeholder="bio" value="" name="bio"  />
-        <input type="text" placeholder="linkedin" value="" name="linkedin"  />
-        <input type="text" placeholder="instagram" value="" name="instagram"  />
-        <input  style="pointer-events: none;" type="text" placeholder="{{username}}" name="username"  />
-        <input style="pointer-events: none;" type="text" placeholder="{{firstname}}" name="firstname"/>
-        <input  style="pointer-events: none;" type="text" placeholder="{{lastname}}" name="lastname" />
-        <input  style="pointer-events: none;" type="email" placeholder="{{email}}" name="email" />
+        <input type="text" value="{{interests}}" name="interests" required />
+        <input type="number" value="{{experience}}"  name="experiance"  />
+        <input type="number" value="{{age}}"  name="age"  />
+        <input type="text" value="{{git}}"  name="git"  />
+        <input type="text" value="{{bio}}"  name="bio"  />
+        <input type="text" value="{{linkedin}}" name="linkedin"  />
+        <input type="text" value="{{instagram}}"  name="instagram"  />
+        <input type="text" value="{{username}}" name="username"  />
+        <input type="text" value="{{firstname}}" name="firstname"/>
+        <input type="text" value="{{lastname}}" name="lastname" />
+        <input  type="email" value="{{email}}" name="email" />
         <button type="submit">Submit</button>
     </form>
 
-</div>
+</div> -->
 </section>
   
 

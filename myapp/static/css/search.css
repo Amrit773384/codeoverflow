@@ -1,0 +1,27 @@
+#output-table tr{
+    font-size: 18px;
+    border-bottom:1px solid rgb(0, 0, 0);
+    height: 40px;
+    border-radius: 5px;
+    text-align: left;
+}
+#output-table tr:not(:first-child):hover{
+    background-color: white;
+    color:red;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.701);
+}
+#output-table{
+    margin : 50px;
+    font-size: 18px;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    border-collapse: collapse;
+}
+
+#output-table th{
+
+
+}
+#output-table td{
+
+}
